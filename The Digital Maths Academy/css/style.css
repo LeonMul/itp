@@ -1,0 +1,152 @@
+body{
+ font-family:ColabThi;
+
+}
+
+/*----------IMages & Backgrounds----------*/
+.bgndImg{
+ background-image: url("../images/abacus3.jpg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.jumbotron1{
+background-image:url('../images/pattern1.png');
+background-attachment:fixed;
+min-height:400px;
+margin-top:5px;
+margin-bottom:0;
+}
+
+
+.image1{
+	background-image:url('../images/pattern1.png');
+}
+
+.footerBackground{
+background-color:#48D1CC
+;
+}
+
+.jumbotron{
+	background-image:url('../images/pattern1.png');
+}
+
+.topFooter{
+	background-color:#333;
+}
+
+.subjectHomeImg{
+	width:75%;
+	height:auto;
+}
+
+.footerIcon{
+	width:70%;
+	height:auto;
+}
+/*----------Text----------*/
+.whiteText{
+	color:#FFFFFF;
+}
+
+.redText{
+	color:#8B0000;
+}
+
+.greenText{
+	color:#006400;
+}
+
+.purpleText{
+	color:#663399;
+}
+.blueText{
+	color:#00008B;
+}
+.lightGreyText{
+	color:#696969;
+}
+
+.darkGreyText{
+	color:#333;
+}
+
+.blackText{
+	color:black;
+}
+
+/*----------Padding----------*/
+.smlPadding{
+	padding-top:10px;
+	padding-bottom:10px;		
+}
+
+.medPadding{
+	padding-top:40px;
+	padding-bottom:40px;
+}
+
+.lrgPadding{
+	padding-top:60px;
+	padding-bottom:60px;	
+	
+}
+
+.xlPadding{
+	padding-top:100px;
+	padding-bottom:100px;	
+}
+
+.medPaddingTop{
+	padding-top:40px;
+}
+
+.lrgPaddingTop{
+	padding-top:50px;
+}
+
+/*----------Custom Fonts Import----------*/
+@font-face {
+ font-family:ColabThi;
+ src: url(../fonts/ColabThi.otf);
+}
+
+@font-face {
+ font-family:ColabReg;
+ src: url(../fonts/ColabReg.otf);
+}
+
+/*----------side bar----------*/
+
+ul.horizontal{
+margin:0;
+padding:0;
+}
+
+
+ul.horizontal li{
+display:block;
+float:left;
+padding:0 10px;
+}
+
+
+
+.item{
+	margin-top:0px;
+	width:100%;
+	height:400px;
+}
+
+
+
+
+
+
+
+
+
+
