@@ -14,7 +14,7 @@
 			
 																
 																	
-			<div class="navbar-fixed-top navbar-inverse" id="home">
+			<div class="navbar-fixed-top navbar-default fixed customColourNavbar" id="home">
 				<div class="container">
 					<div class="navbar-brand">
 						The Digital Maths Academy
@@ -25,8 +25,9 @@
 					<div class="collapse navbar-collapse navHeaderCollapse"> 
 						<ul class="nav navbar-nav navbar-right navHover">
 					
-									<li><a href="home.html">Home</a></li>
-									<li><a href="#about">About</a></li>
+									<li><a href="home.php">Home</a></li>
+									<li><a href="about.html">About</a></li>
+									<li><a href="Quiz.html">Quiz</a></li>
 									<li><a href="Games.html">Games</a></li>
 									<li><a href="contact.html">Contact</a></li>												
 																			
@@ -38,13 +39,13 @@
 			
 			<div class="jumbotron">
 				<div class=" container">
-					<div class=" row medPadding">
+					<div class=" row smlPadding">
 						<div class="col-md-4 text-center smlPadding"> 	
 
 						</div>							
 						
 						<div class="col-md-4 text-center smlPadding whiteText"> 
-								<h1> Welcome back!</h1>
+								<h1> Welcome back <?php echo $userRow['email']; ?>!</h1>
 								<h2> View your progress below!</h2>
 							</br>
 						</div>
@@ -59,7 +60,8 @@
 				<div class="container">
 					<div class=" row medPadding">
 						<div class="col-md-12 text-center smlPadding"> 	
-							<h2>Pick a subject to revise!</h2>
+							<h2><strong>Pick a topic to revise!</strong></h2>
+							<h3>Below you will find some of our main topics. <br /> These include activities to test your knowledge in the four most prominent maths subjects.</h3>
 						</div>							
 	
 					</div>
@@ -68,46 +70,103 @@
 				<div class="container">
 					<div class=" row medPadding">
 						<div class="col-md-3 text-center smlPadding"> 	
-							<img class ="subjectHomeImg" src="images/blue.png">
+							<a href="QuizAddition.php"  class="subjectHomeImg"><img class ="subjectHomeImg" src="images/addition2.png"></a>
+							<h3><strong>Addition</strong></h3>
+							<p></p>
 						</div>							
 						
 						<div class="col-md-3 text-center smlPadding"> 
-							<img class ="subjectHomeImg" src="images/red.png">
-
-
+							<a href="QuizSubtraction.php" class="subjectHomeImg"><img class ="subjectHomeImg" src="images/subtraction2.png"></a>
+							<h3><strong>Subtraction</strong></h3>							
 						</div>
 						
 						<div class="col-md-3 text-center smlPadding"> 
-							<img class ="subjectHomeImg" src="images/green.png">
+							<a href="QuizMulti.php" class="subjectHomeImg"><img class="subjectHomeImg" src="images/multiplication2.png"></a>
+							<h3><strong>Multiplication</strong></h3>								
 						</div>		
 						
 						<div class="col-md-3 text-center smlPadding"> 
-							<img class ="subjectHomeImg" src="images/orange.png">
+							<a href="QuizDivision.php" class="subjectHomeImg"><img class ="subjectHomeImg" src="images/division2.png"></a>
+							<h3><strong>Division</strong></h3>								
 						</div>							
 						
 					</div>
+				</div>
+				
+				<div class="container">
+					<div class=" row medPadding">
+						<div class="col-md-12 text-center smlPadding"> 	
+							<h2><strong>Your local vicinity!</strong></h2>
+							<br />
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1190.8382655543317!2d-6.2438445334783745!3d53.349046329908234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e8cd86e97e7%3A0x6d51b774ee7fa935!2sNational+College+of+Ireland!5e0!3m2!1sen!2sie!4v1455882696428" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+						</div>							
+					</div>
+				</div>			
+								
+				<div class ="homeSection3">
+					<div class="container ">
+						<div class=" row medPadding">
+							<div class="col-md-3 text-center smlPadding"> 	
+								<a href ="Games.html"><img class ="iconSetHome" src="images/game.png"></a>
+								<h3><strong>Games</strong></h3>								
+							</div>							
+							
+							<div class="col-md-3 text-center smlPadding"> 
+								<a href ="maps.html"><img class ="iconSetHome" src="images/gps.png"></a>
+								<h3><strong>Maps</strong></h3>							
+							</div>
+							
+							<div class="col-md-3 text-center smlPadding"> 
+								<img class ="iconSetHome" src="images/shape.png">
+								<h3><strong>Your School</strong></h3>								
+							</div>		
+							
+							<div class="col-md-3 text-center smlPadding"> 
+								<a href="Quiz.html" class="subjectHomeImg"><img class ="iconSetHome" src="images/squares.png"></a>
+								<h3><strong>Quizzes</strong></h3>								
+							</div>							
+							
+						</div>
+					</div>				
 				</div>
 
 				<div class="container">
 					<div class=" row medPadding">
 						<div class="col-md-12 text-center smlPadding"> 	
-							<h2>Click to view leaderboard in more detail!</h2>
-							<img class ="subjectHomeImg" src="images/leaderboard.png">
+							<h2><strong>View leaderboards in more detail in the leaderboard section!</strong></h2>
+							<br />
+							<img class ="leaderboardImg" src="images/leaderboard.png">
 						</div>							
-	
 					</div>
 				</div>			
 				
-				<div class="container">
-				<div class=" row medPadding">
-				<div class="col-md-12 text-center smlPadding"> 	
+				
+				
+				
+				
+			<div class="container padding darkGreyText" id="contact">
+					
+			<div class="col-md-2 text-center smlPadding">
+				
+				</div> 			
+			<div class="col-md-8 text-center smlPadding darkGreyText"> 
+				<h2><strong>Subscribe to our weekly newsletter!</strong></h2>
+                	<form role="form" action="newsletter.php" method="post" id="sub">
+							<label for="name"> Name:</label><input type="name" class="form-control" name="name" placeholder="name"/>
+						<label for="email"> Email:</label><input type="email" class="form-control" name="email" placeholder="example@example.com"/>
+						</br>
+						<button class="btn greenHoverBtn roundBtn" type="submit Submit"  name="submit">Subscribe</button>
+						
+					</form>
+            </div>
+            <div class="col-md-2 text-center smlPadding">
+				</div> 
+            </div>
+				</br>
+				</br>
+				
 
-									
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1190.8382655543317!2d-6.2438445334783745!3d53.349046329908234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e8cd86e97e7%3A0x6d51b774ee7fa935!2sNational+College+of+Ireland!5e0!3m2!1sen!2sie!4v1455882696428" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-				</div>
-				</div>
-				</div>	
 
 				<div class ="topFooter">
 	                 <div class="container whiteText">
@@ -116,19 +175,19 @@
 							<h4></h4>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<a href ="Index.html" ><img class="footerIcon" src="images/map.png" /></a>
+								<a href ="Index.html" ><img class="footerIcon" src="images/logout2.png" /></a>
 								<strong>Logout</strong>
 							</div>	
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/Leaderboards.png" />	
+								<img class="footerIcon" src="images/Leaderboards2.png" />	
 								<strong>Leaderboards</strong>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/quiz.png" />
+								<img class="footerIcon" src="images/quiz2.png" />
 								<strong>Quiz</strong>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/logout.png" />
+								<img class="footerIcon" src="images/map2.png" />
 								<strong>Maps</strong>
 							</div>							
 							<div class="col-md-4 text-right"> 			
@@ -182,6 +241,5 @@
 			<script src="js/bootstrap.js"></script>	
 			<script type="text/javascript" src="js/script.js"></script>	
   
-
 		</body>
 	</html>

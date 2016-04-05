@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<database>
+    <subject>
+        <maths>
+            <notes>Click here for some additional notes!</notes>
+            <website></website>
+        </maths>
+    </subject>
+    <subject>
+        <english>
+            <notes></notes>
+            <website></website>
+        </english>
+    </subject>
+    <subject>
+        <irish>
+            <notes></notes>
+            <website></website>
+        </irish>
+    </subject>
+</database>
