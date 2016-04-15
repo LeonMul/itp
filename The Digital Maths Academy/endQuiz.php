@@ -8,12 +8,12 @@
 					
  			<link rel="shortcut icon" href="images/icon1.ico"/>
 	
-	<link rel="stylesheet" type="text/css" href="css/Quiz.css" />
+	
 </head>
 
 <body>
 
-	<div class="navbar-fixed-top navbar-inverse" id="home">
+			<div class="navbar-fixed-top navbar-default fixed customColourNavbar" id="home">
 				<div class="container">
 					<div class="navbar-brand">
 						The Digital Maths Academy
@@ -23,17 +23,16 @@
 					</button>
 					<div class="collapse navbar-collapse navHeaderCollapse"> 
 						<ul class="nav navbar-nav navbar-right navHover">
-					
-									<li><a href="home.html">Home</a></li>
-									<li><a href="#about">About</a></li>
-									<li><a href="Games.html">Games</a></li>
-									<li><a href="contact.html">Contact</a></li>	
-									<li><a href="Index.html">Logout</a></li>
-
+							<li><a href="home.php">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="Quiz.html">Quiz</a></li>
+							<li><a href="Games.html">Games</a></li>
+							<li><a href="contact.html">Contact</a></li>												
+							<li><a href="logout.php">Logout</a></li>
 						</ul>
 					</div>
 				</div>
-			</div>	
+			</div>
 			
 			
 				<div class="jumbotron">
@@ -45,7 +44,7 @@
 								<br/>
 								<br/>
 								<br/>
-								<img src="images/Addition-Quiz.png">
+								<img src="images/Final-Quiz.png">
 						</div>							
 								
 								<br/>
@@ -66,8 +65,13 @@
 			
 			
 	<div class="container">
+	    <div class=" row lrgPadding">
+			<div class="col-md-3 text-center smlPadding"> 	
+			</div>
+						
+			<div class="col-md-6 text-center smlPadding">
 
-<form action="gradeEnd.php" method="post" id="quiz">
+            <form action="gradeEnd.php" method="post" id="quiz" >
 		
             <ol>
             
@@ -1107,36 +1111,39 @@
             
             </ol>
             
-            <input type="submit" value="Submit Quiz"  />
+            <input type="submit" class="btn submitButton roundBtn greenHoverBtn" value="Submit Quiz"  />
 		
 		</form>
+		</br>
+	</div>
+		<div class="col-md-3 text-center smlPadding"></div>	
+		</div>
 	</div>
 	
 	
 	
-	
-	
-	
-	 	<div class ="topFooter">
+	</br>
+	</br>
+				<div class ="topFooter">
 	                 <div class="container whiteText">
 						<div class=" row medPadding">
 							<div class="col-md-4 text-center"> 			
 							<h4></h4>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<a href ="Index.html" ><img class="footerIcon" src="images/logout2.png" /></a>
+								<a href ="logout.php" ><img class="footerIcon" src="images/logout2.png" /></a>
 								<strong>Logout</strong>
 							</div>	
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/Leaderboards2.png" />	
+								<a href ="leaderboards.php" ><img class="footerIcon" src="images/Leaderboards2.png" /></a>	
 								<strong>Leaderboards</strong>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/quiz2.png" />
+								<a href ="Quiz.html" ><img class="footerIcon" src="images/quiz2.png" /></a>
 								<strong>Quiz</strong>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/map2.png" />
+								<a href ="maps.php" ><img class="footerIcon" src="images/map2.png" /></a>
 								<strong>Maps</strong>
 							</div>							
 							<div class="col-md-4 text-right"> 			
@@ -1189,15 +1196,7 @@
 			<script src="js/bootstrap.js"></script>	
 			<script type="text/javascript" src="js/script.js"></script>	
 			
-	<script type="text/javascript">
-	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	</script>
-	<script type="text/javascript">
-	var pageTracker = _gat._getTracker("UA-68528-29");
-	pageTracker._initData();
-	pageTracker._trackPageview();
-	</script>
+
 
 </body>
 

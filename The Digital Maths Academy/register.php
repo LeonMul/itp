@@ -11,19 +11,15 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-if($_REQUEST['name']=='' || $_REQUEST['email']=='' || $_REQUEST['school']==''|| $_REQUEST['postcode']=='' || $_REQUEST['school']=='')
-{
-Echo "Please return to registration and fill the empty field.";
-}
 
 else{
 $sql="INSERT INTO users(name,email,school,postcode,password) VALUES('".$_REQUEST['name']."', '".$_REQUEST['email']."', '".$_REQUEST['school']."','".$_REQUEST['postcode']."','".$_REQUEST['password']."')";
 
 	if (mysqli_query($conn, $sql)) {
 	    $last_id = mysqli_insert_id($conn);
-	    echo "New record created successfully. Last inserted ID is: " . $last_id;
+	    echo "Thank you for registering! New record created successfully. Last inserted ID is: " . $last_id;
 	} else {
-	    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+ 		echo "<script>alert('This email is already in use.'); location.href='registration.html';</script>";
 	}
 }
 
@@ -44,8 +40,8 @@ mysqli_close($conn);
 		<div class=" container">
 			<div class="row text-center">
 			    <div class="col-md-3 text-center">
-					 <h3>Please return to login page...</h3>
-					<a href ="Index.html" button class="btn submitButton roundBtn greenHoverBtn" href="Index.html">Login Page</a>
+					 <h3>Please return to login page to sign in...</h3>
+					<a href ="Index.php" button class="btn submitButton roundBtn greenHoverBtn" href="Index.html">Login Page</a>
                  </p>		
 			</div>
 		</div>

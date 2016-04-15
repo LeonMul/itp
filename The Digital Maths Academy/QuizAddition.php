@@ -23,17 +23,25 @@
 					</button>
 					<div class="collapse navbar-collapse navHeaderCollapse"> 
 						<ul class="nav navbar-nav navbar-right navHover">
-					
-									<li><a href="home.html">Home</a></li>
-									<li><a href="#about">About</a></li>
-									<li><a href="Games.html">Games</a></li>
-									<li><a href="contact.html">Contact</a></li>	
-									<li><a href="Index.html">Logout</a></li>
-
+							<li><a href="home.php">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							
+							<li class="dropdown">
+						        <a class="dropdown-toggle customColourNavbar" data-toggle="dropdown" href="#">Activities
+						        <span class="caret"></span></a>
+						        <ul class="dropdown-menu customColourNavbar">
+						        <li><a href="Quiz.html">Quiz</a></li>
+						        <li><a href="leaderboards.php">Leaderboards</a></li> 
+								<li><a href="Games.html">Games</a></li> 
+						        </ul>
+						    </li>
+						    
+							<li><a href="contact.html">Contact</a></li>												
+							<li><a href="logout.php">Logout</a></li>
 						</ul>
 					</div>
 				</div>
-			</div>	
+			</div>
 			
 			
 				<div class="jumbotron">
@@ -64,277 +72,292 @@
 			</div>
 			
 			
-			
+				
+							
 	<div class="container">
-
-<form action="gradeAddition.php" method="post" id="quiz">
-		
-            <ol>
-            
-                <li>
-                
-                    <h3>What is 7 + 5</h3>
-                    
-                    <div>
-                        <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
-                        <label for="question-1-answers-A">A) 9 </label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
-                        <label for="question-1-answers-B">B) 11 </label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
-                        <label for="question-1-answers-C">C) 12 </label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
-                        <label for="question-1-answers-D">D) 8 </label>
-                    </div>
-                
-                </li>
-                
-                <li>
-                
-                    <h3>What is 2 + 3</h3>
-                    
-                    <div>
-                        <input type="radio" name="question-2-answers" id="question-2-answers-A" value="A" />
-                        <label for="question-2-answers-A">A) 4 </label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-2-answers" id="question-2-answers-B" value="B" />
-                        <label for="question-2-answers-B">B) 5 </label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-2-answers" id="question-2-answers-C" value="C" />
-                        <label for="question-2-answers-C">C) 6 </label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-2-answers" id="question-2-answers-D" value="D" />
-                        <label for="question-2-answers-D">D) 9 </label>
-                    </div>
-                
-                </li>
-                
-                <li>
-                
-                    <h3>Which sum is incorrect?</h3>
-                    
-                    <div>
-                        <input type="radio" name="question-3-answers" id="question-3-answers-A" value="A" />
-                        <label for="question-3-answers-A">A) 10 + 0 = 11</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-3-answers" id="question-3-answers-B" value="B" />
-                        <label for="question-3-answers-B">B) 5 + 5 = 10</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-3-answers" id="question-3-answers-C" value="C" />
-                        <label for="question-3-answers-C">C) 3 + 6 = 9</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-3-answers" id="question-3-answers-D" value="D" />
-                        <label for="question-3-answers-D">D) 4 + 8 = 12 </label>
-                    </div>
-                
-                </li>
-                <li>
-                
-                    <h3>Which sum is correct?</h3>
-                    
-                    <div>
-                        <input type="radio" name="question-4-answers" id="question-4-answers-A" value="A" />
-                        <label for="question-4-answers-A">A) 4 + 2 = 7</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-4-answers" id="question-4-answers-B" value="B" />
-                        <label for="question-4-answers-B">B) 1 + 2 = 4</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-4-answers" id="question-4-answers-C" value="C" />
-                        <label for="question-4-answers-C">C) 3 + 5 = 6</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-4-answers" id="question-4-answers-D" value="D" />
-                        <label for="question-4-answers-D">D) 6 + 6 = 12</label>
-                    </div>
-                    
-                
-                </li>
-                <li>
-                
-                    <h3>Which number makes this sum correct 9 + __ = 10</h3>
-                    
-                    <div>
-                        <input type="radio" name="question-5-answers" id="question-5-answers-A" value="A" />
-                        <label for="question-5-answers-A">A) 0 </label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-5-answers" id="question-5-answers-B" value="B" />
-                        <label for="question-5-answers-B">B) 1 </label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-5-answers" id="question-5-answers-C" value="C" />
-                        <label for="question-5-answers-C">C) 3 </label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-5-answers" id="question-5-answers-D" value="D" />
-                        <label for="question-5-answers-D">D) 2 </label>
-                    </div>
-                    
-                
-                </li>
-                <li>
-                
-                    <h3>What is 0 + 12?</h3>
-                    
-                    <div>
-                        <input type="radio" name="question-6-answers" id="question-6-answers-A" value="A" />
-                        <label for="question-6-answers-A">A) 4 </label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-6-answers" id="question-6-answers-B" value="B" />
-                        <label for="question-6-answers-B">B) 0 </label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-6-answers" id="question-6-answers-C" value="C" />
-                        <label for="question-6-answers-C">C) 12 </label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-6-answers" id="question-6-answers-D" value="D" />
-                        <label for="question-6-answers-D">D) 6 </label>
-                    </div>
-                
-                </li>
-                
-                <li>
-                
-                    <h3>What is 4 + 7</h3>
-                    
-                    <div>
-                        <input type="radio" name="question-7-answers" id="question-7-answers-A" value="A" />
-                        <label for="question-7-answers-A">A) 10</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-7-answers" id="question-7-answers-B" value="B" />
-                        <label for="question-7-answers-B">B) 11</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-7-answers" id="question-7-answers-C" value="C" />
-                        <label for="question-7-answers-C">C) 12</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-7-answers" id="question-7-answers-D" value="D" />
-                        <label for="question-7-answers-D">D) 6</label>
-                    </div>
-                
-                </li>
-                
-                <li>
-                
-                    <h3>Which sum is incorrect?</h3>
-                    
-                    <div>
-                        <input type="radio" name="question-8-answers" id="question-8-answers-A" value="A" />
-                        <label for="question-8-answers-A">A) 1 + 0 = 1</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-8-answers" id="question-8-answers-B" value="B" />
-                        <label for="question-8-answers-B">B) 5 + 7 = 12</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-8-answers" id="question-8-answers-C" value="C" />
-                        <label for="question-8-answers-C">C) 3 + 6 = 8</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-8-answers" id="question-8-answers-D" value="D" />
-                        <label for="question-8-answers-D">D) 2 + 8 = 10 </label>
-                    </div>
-                
-                </li>
-                <li>
-                
-                    <h3>Which sum is correct?</h3>
-                    
-                    <div>
-                        <input type="radio" name="question-9-answers" id="question-9-answers-A" value="A" />
-                        <label for="question-9-answers-A">A) 8 + 2 = 11</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-9-answers" id="question-9-answers-B" value="B" />
-                        <label for="question-9-answers-B">B) 2 + 2 = 5</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-9-answers" id="question-9-answers-C" value="C" />
-                        <label for="question-9-answers-C">C) 3 + 5 = 6</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-9-answers" id="question-9-answers-D" value="D" />
-                        <label for="question-9-answers-D">D) 1 + 1 = 2</label>
-                    </div>
-                    
-                
-                </li>
-                <li>
-                
-                    <h3>Which number makes this sum correct 7 + __ = 10</h3>
-                    
-                    <div>
-                        <input type="radio" name="question-10-answers" id="question-10-answers-A" value="A" />
-                        <label for="question-10-answers-A">A) 3</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-10-answers" id="question-10-answers-B" value="B" />
-                        <label for="question-10-answers-B">B) 1</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-10-answers" id="question-10-answers-C" value="C" />
-                        <label for="question-10-answers-C">C) 0</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-10-answers" id="question-10-answers-D" value="D" />
-                        <label for="question-10-answers-D">D) 2</label>
-                    </div>
-                    
-                
-                </li>
-            
-            </ol>
-            
-            <input type="submit" value="Submit Quiz"  />
-		
-		</form>
+	    
+					<div class=" row lrgPadding">
+						<div class="col-md-3 text-center smlPadding"> 	
+						</div>
+						
+						<div class="col-md-6 text-center smlPadding">
+                           <form action="gradeAddition.php" method="post" id="quiz">
+                                
+                    		
+                                <ol>
+                                
+                                    <li>
+                                    
+                                        <h3>What is 7 + 5</h3>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
+                                            <label for="question-1-answers-A">A) 9 </label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
+                                            <label for="question-1-answers-B">B) 11 </label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
+                                            <label for="question-1-answers-C">C) 12 </label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
+                                            <label for="question-1-answers-D">D) 8 </label>
+                                        </div>
+                                    
+                                    </li>
+                                    
+                                    <li>
+                                    
+                                        <h3>What is 2 + 3</h3>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-2-answers" id="question-2-answers-A" value="A" />
+                                            <label for="question-2-answers-A">A) 4 </label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-2-answers" id="question-2-answers-B" value="B" />
+                                            <label for="question-2-answers-B">B) 5 </label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-2-answers" id="question-2-answers-C" value="C" />
+                                            <label for="question-2-answers-C">C) 6 </label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-2-answers" id="question-2-answers-D" value="D" />
+                                            <label for="question-2-answers-D">D) 9 </label>
+                                        </div>
+                                    
+                                    </li>
+                                    
+                                    <li>
+                                    
+                                        <h3>Which sum is incorrect?</h3>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-3-answers" id="question-3-answers-A" value="A" />
+                                            <label for="question-3-answers-A">A) 10 + 0 = 11</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-3-answers" id="question-3-answers-B" value="B" />
+                                            <label for="question-3-answers-B">B) 5 + 5 = 10</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-3-answers" id="question-3-answers-C" value="C" />
+                                            <label for="question-3-answers-C">C) 3 + 6 = 9</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-3-answers" id="question-3-answers-D" value="D" />
+                                            <label for="question-3-answers-D">D) 4 + 8 = 12 </label>
+                                        </div>
+                                    
+                                    </li>
+                                    <li>
+                                    
+                                        <h3>Which sum is correct?</h3>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-4-answers" id="question-4-answers-A" value="A" />
+                                            <label for="question-4-answers-A">A) 4 + 2 = 7</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-4-answers" id="question-4-answers-B" value="B" />
+                                            <label for="question-4-answers-B">B) 1 + 2 = 4</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-4-answers" id="question-4-answers-C" value="C" />
+                                            <label for="question-4-answers-C">C) 3 + 5 = 6</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-4-answers" id="question-4-answers-D" value="D" />
+                                            <label for="question-4-answers-D">D) 6 + 6 = 12</label>
+                                        </div>
+                                        
+                                    
+                                    </li>
+                                    <li>
+                                    
+                                        <h3>Which number makes this sum correct 9 + __ = 10</h3>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-5-answers" id="question-5-answers-A" value="A" />
+                                            <label for="question-5-answers-A">A) 0 </label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-5-answers" id="question-5-answers-B" value="B" />
+                                            <label for="question-5-answers-B">B) 1 </label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-5-answers" id="question-5-answers-C" value="C" />
+                                            <label for="question-5-answers-C">C) 3 </label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-5-answers" id="question-5-answers-D" value="D" />
+                                            <label for="question-5-answers-D">D) 2 </label>
+                                        </div>
+                                        
+                                    
+                                    </li>
+                                    <li>
+                                    
+                                        <h3>What is 0 + 12?</h3>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-6-answers" id="question-6-answers-A" value="A" />
+                                            <label for="question-6-answers-A">A) 4 </label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-6-answers" id="question-6-answers-B" value="B" />
+                                            <label for="question-6-answers-B">B) 0 </label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-6-answers" id="question-6-answers-C" value="C" />
+                                            <label for="question-6-answers-C">C) 12 </label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-6-answers" id="question-6-answers-D" value="D" />
+                                            <label for="question-6-answers-D">D) 6 </label>
+                                        </div>
+                                    
+                                    </li>
+                                    
+                                    <li>
+                                    
+                                        <h3>What is 4 + 7</h3>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-7-answers" id="question-7-answers-A" value="A" />
+                                            <label for="question-7-answers-A">A) 10</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-7-answers" id="question-7-answers-B" value="B" />
+                                            <label for="question-7-answers-B">B) 11</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-7-answers" id="question-7-answers-C" value="C" />
+                                            <label for="question-7-answers-C">C) 12</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-7-answers" id="question-7-answers-D" value="D" />
+                                            <label for="question-7-answers-D">D) 6</label>
+                                        </div>
+                                    
+                                    </li>
+                                    
+                                    <li>
+                                    
+                                        <h3>Which sum is incorrect?</h3>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-8-answers" id="question-8-answers-A" value="A" />
+                                            <label for="question-8-answers-A">A) 1 + 0 = 1</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-8-answers" id="question-8-answers-B" value="B" />
+                                            <label for="question-8-answers-B">B) 5 + 7 = 12</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-8-answers" id="question-8-answers-C" value="C" />
+                                            <label for="question-8-answers-C">C) 3 + 6 = 8</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-8-answers" id="question-8-answers-D" value="D" />
+                                            <label for="question-8-answers-D">D) 2 + 8 = 10 </label>
+                                        </div>
+                                    
+                                    </li>
+                                    <li>
+                                    
+                                        <h3>Which sum is correct?</h3>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-9-answers" id="question-9-answers-A" value="A" />
+                                            <label for="question-9-answers-A">A) 8 + 2 = 11</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-9-answers" id="question-9-answers-B" value="B" />
+                                            <label for="question-9-answers-B">B) 2 + 2 = 5</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-9-answers" id="question-9-answers-C" value="C" />
+                                            <label for="question-9-answers-C">C) 3 + 5 = 6</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-9-answers" id="question-9-answers-D" value="D" />
+                                            <label for="question-9-answers-D">D) 1 + 1 = 2</label>
+                                        </div>
+                                        
+                                    
+                                    </li>
+                                    <li>
+                                    
+                                        <h3>Which number makes this sum correct 7 + __ = 10</h3>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-10-answers" id="question-10-answers-A" value="A" />
+                                            <label for="question-10-answers-A">A) 3</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-10-answers" id="question-10-answers-B" value="B" />
+                                            <label for="question-10-answers-B">B) 1</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-10-answers" id="question-10-answers-C" value="C" />
+                                            <label for="question-10-answers-C">C) 0</label>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="radio" name="question-10-answers" id="question-10-answers-D" value="D" />
+                                            <label for="question-10-answers-D">D) 2</label>
+                                        </div>
+                                        
+                                    
+                                    </li>
+                                
+                                </ol>
+                                
+                                <input type="submit" class="btn submitButton roundBtn greenHoverBtn" value="Submit Quiz"  />
+                    		
+                    		</form>
+                    		</br>						     	
+						</div>
+						
+						<div class="col-md-3 text-center smlPadding"> 	
+						</div>	
+					</div>
+					
+ 
 	</div>
 	
 	
@@ -353,15 +376,15 @@
 								<strong>Logout</strong>
 							</div>	
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/Leaderboards2.png" />	
+								<img href="leaderboards.php" class="footerIcon" src="images/Leaderboards2.png" />	
 								<strong>Leaderboards</strong>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/quiz2.png" />
+								<a href="Quiz.html"><img class="footerIcon" src="images/quiz2.png" /></a>
 								<strong>Quiz</strong>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/map2.png" />
+								<img href="maps.html" class="footerIcon" src="images/map2.png" />
 								<strong>Maps</strong>
 							</div>							
 							<div class="col-md-4 text-right"> 			

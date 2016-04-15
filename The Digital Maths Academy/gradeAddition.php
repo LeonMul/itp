@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -9,23 +12,49 @@
 			<meta name="viewport" content="width=device-width, initial scale=1">
 			<link rel="stylesheet" href="css/bootstrap.min.css" />
 			<link rel="stylesheet" href="css/style.css" />
-					
  			<link rel="shortcut icon" href="images/icon1.ico"/>
-	
-	<link rel="stylesheet" type="text/css" href="css/Quiz.css" />
 </head>
 
 <body>
-	
+			<div class="navbar-fixed-top navbar-default fixed customColourNavbar" id="home">
+				<div class="container">
+					<div class="navbar-brand">
+						The Digital Maths Academy
+					</div> 
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+						Menu
+					</button>
+					<div class="collapse navbar-collapse navHeaderCollapse"> 
+						<ul class="nav navbar-nav navbar-right navHover">
+							<li><a href="home.php">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="Quiz.html">Quiz</a></li>
+							<li><a href="Games.html">Games</a></li>
+							<li><a href="contact.html">Contact</a></li>												
+							<li><a href="logout.php">Logout</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 			
-			
-			
-	<div id="page-wrap">
+			<div class="jumbotron">
+				<div class=" container">
+					<div class=" row medPadding">
+						<div class="col-md-12 text-center smlPadding whiteText"> 	
+						<h1>Quiz Score!</h1>
+						</div>					
+						<div class="col-md-4 text-justify smlPadding"> 
 
-		<h1>Quiz Results</h1>
+						</div>										
+					</div>
+				</div>
+			</div>
+			
+	
 		
+			 
         <?php
-            
+
             $answer1 = $_POST['question-1-answers'];
             $answer2 = $_POST['question-2-answers'];
             $answer3 = $_POST['question-3-answers'];
@@ -36,8 +65,8 @@
             $answer8 = $_POST['question-8-answers'];
             $answer9 = $_POST['question-9-answers'];
             $answer10 = $_POST['question-10-answers'];
-        
-            $totalCorrectAddition = 0;
+            
+            $totalCorrectEnd = 0;
             
             if ($answer1 == "C") { $totalCorrectAddition++; }
             if ($answer2 == "B") { $totalCorrectAddition++; }
@@ -50,22 +79,135 @@
             if ($answer9 == "D") { $totalCorrectAddition++; }
             if ($answer10 == "A") { $totalCorrectAddition++; }
             
-            echo "<div id='results'>$totalCorrectAddition / 10 correct</div>";
             
-        ?>
+            
+            
+			$servername = "localhost";
+			$username = "leonmul";
+			$password = "";
+			$dbname = "leaderboard";
+			
+			// Create connection
+			$conn = mysqli_connect($servername, $username, $password, $dbname);
+			
+			
 	
-	</div>
-	
-<script type="text/javascript">
-	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	</script>
-	<script type="text/javascript">
-	var pageTracker = _gat._getTracker("UA-68528-29");
-	pageTracker._initData();
-	pageTracker._trackPageview();
-	</script>
+			
+			// Check connection
+			if (!$conn) {
+			    die("Connection failed: " . mysqli_connect_error());
+			}
+			
+			
+			else{
+			$sql="INSERT INTO additionQuiz(email,score) VALUES('{$_SESSION['$myemail']}','$totalCorrectAddition')";
+			
+			
+				if (mysqli_query($conn, $sql)) {
+				    $last_id = mysqli_insert_id($conn);
+				    echo "Your score has been posted to the database!!";
+				} else {
+			 		echo "An error occured trying to post!>";
+				}
+			}
+			
+			mysqli_close($conn);
+			
+			
+			
+			?>
+          	
+			
+			<div class="container">
+				<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<h1>Final Quiz Grade</h1>
+				<?php echo "<div id='results'>$totalCorrectAddition / 10 correct</div>";
+				?>
+				</br>
+				
+			<a class="btn submitButton roundBtn greenHoverBtn" href="Quiz.html">Return to Quiz Page</a>
+			</div>
+			</div>
+			
+			</br>
+			</br>
 
-</body>
+				<div class ="topFooter">
+	                 <div class="container whiteText">
+						<div class=" row medPadding">
+							<div class="col-md-4 text-center"> 			
+							<h4></h4>
+							</div>
+							<div class="col-md-1 text-center"> 			
+								<a href ="logout.php" ><img class="footerIcon" src="images/logout2.png" /></a>
+								<strong>Logout</strong>
+							</div>	
+							<div class="col-md-1 text-center"> 			
+								<a href ="leaderboards.php" ><img class="footerIcon" src="images/Leaderboards2.png" /></a>	
+								<strong>Leaderboards</strong>
+							</div>
+							<div class="col-md-1 text-center"> 			
+								<a href ="Quiz.html" ><img class="footerIcon" src="images/quiz2.png" /></a>
+								<strong>Quiz</strong>
+							</div>
+							<div class="col-md-1 text-center"> 			
+								<a href ="maps.php" ><img class="footerIcon" src="images/map2.png" /></a>
+								<strong>Maps</strong>
+							</div>							
+							<div class="col-md-4 text-right"> 			
+			
+							</div>							
+						</div>
+					</div>
+				</div>
+				
+				<div class="topFooter whiteText">
+					<div class="container whiteText">
+						<div class=" row smlPadding">
+							<div class="col-md-2 text-center"> 			
+								<h4></h4>
+							</div>
+								<div class="col-md-2 text-center"> 			
+									<h4><strong>Educational Links</strong></h4>		
+								</div>	
+								<div class="col-md-2 text-center"> 			
+									<h4><strong>About Us</strong></h4>		
+								</div>
+								<div class="col-md-2 text-center"> 			
+									<h4><strong>Meet the Team</strong></h4>		
+								</div>
+								<div class="col-md-2 text-center"> 			
+									<h4><strong>Terms of Service</strong></h4>		
+								</div>								
+							<div class="col-md-2 text-right"> 			
+							</div>							
+						</div>
+					</div>
+				</div>
+				
+                <div class="footer footerBackground whiteText">
+					<div class=" row smlPadding">
+						<div class="col-md-6 text-center"> 			
+						<h4><strong>The Digital Maths Academy</strong></h4>
+						</div>
+						<div class="col-md-5 text-center"> 			
+							<h4><strong>Copyright 2016 &copy;</strong></h4>		
+						</div>	
+						<div class="col-md-1 text-right"> 			
+		
+						</div>							
+					</div>
+				</div>
+                	
+               
+                		
+            <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+			<script src="js/bootstrap.js"></script>	
+			<script type="text/javascript" src="js/script.js"></script>	
 
-</html>
+		</body>
+	</html>
+
+
+

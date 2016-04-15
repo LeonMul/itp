@@ -5,7 +5,7 @@
 			<meta name="viewport" content="width=device-width, initial scale=1">
 			<link rel="stylesheet" href="css/bootstrap.min.css" />
 			<link rel="stylesheet" href="css/style.css" />
-			<link rel="shortcut icon" href="images/icon1.ico"/>
+			<link rel="icon" href="images/companyLogoSmaller.png">
 			
 				
 	</head>
@@ -37,24 +37,28 @@
 					<div class="col-md-3 text-center"> 		
 
 					</div>	
-
+					
+					<!--Form used to register to the site, form validation is present and the form will run a PHP script 'register.php' when completed
+					  This script will script will post the new users' credentials to the database to which they can be used to login -->
+					
+					
 					<div class="col-md-6 text-center"> 	
 						<h2 class="whiteText">Please enter the required fields to complete registration</h2>
 						<br />
 						
 						<form name="registration" method="POST" action="register.php" class="form">
 						  <div class="form-group">
-							<label for="name" class="whiteText"> Name*:</label>
+							<label for="name" class="whiteText"> Name:</label>
 							<input type="text" name="name" value="" class="form-control" required>
 						  </div>
 						  
 						  <div class="form-group">
-							<label for="email" class="whiteText">Email*:</label>
+							<label for="email" class="whiteText">Email:</label>
 							<input type="text" name="email" value="" class="form-control" required>
 						  </div>
 						  
 						  <div class="form-group">
-							<label for="school" class="whiteText">School*:</label>
+							<label for="school" class="whiteText">School:</label>
 							<input type="text" name="school" value="" class="form-control" required>
 						  </div>						  
 						  
@@ -98,7 +102,7 @@
 						</form>							  	
 
 						  <h3 class="whiteText">Already a member? Return to login...</h3>
-						  	<a button type="submit" class="btn greenHoverBtn roundBtn"  href = "Index.html">Login</button></a>
+						  	<a button type="submit" class="btn greenHoverBtn roundBtn"  href = "Index.php">Login</button></a>
 						  	<br />
 
 					</div>

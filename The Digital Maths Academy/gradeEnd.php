@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -9,23 +12,49 @@
 			<meta name="viewport" content="width=device-width, initial scale=1">
 			<link rel="stylesheet" href="css/bootstrap.min.css" />
 			<link rel="stylesheet" href="css/style.css" />
-					
  			<link rel="shortcut icon" href="images/icon1.ico"/>
-	
-	<link rel="stylesheet" type="text/css" href="css/Quiz.css" />
 </head>
 
 <body>
-	
+			<div class="navbar-fixed-top navbar-default fixed customColourNavbar" id="home">
+				<div class="container">
+					<div class="navbar-brand">
+						The Digital Maths Academy
+					</div> 
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+						Menu
+					</button>
+					<div class="collapse navbar-collapse navHeaderCollapse"> 
+						<ul class="nav navbar-nav navbar-right navHover">
+							<li><a href="home.php">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="Quiz.html">Quiz</a></li>
+							<li><a href="Games.html">Games</a></li>
+							<li><a href="contact.html">Contact</a></li>												
+							<li><a href="logout.php">Logout</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 			
-			
-			
-	<div id="page-wrap">
+			<div class="jumbotron">
+				<div class=" container">
+					<div class=" row medPadding">
+						<div class="col-md-12 text-center smlPadding whiteText"> 	
+						<h1>Quiz Score!</h1>
+						</div>					
+						<div class="col-md-4 text-justify smlPadding"> 
 
-		<h1>Quiz Results</h1>
+						</div>										
+					</div>
+				</div>
+			</div>
+			
+	
 		
+			 
         <?php
-            
+
             $answer1 = $_POST['question-1-answers'];
             $answer2 = $_POST['question-2-answers'];
             $answer3 = $_POST['question-3-answers'];
@@ -46,86 +75,175 @@
             $answer18 = $_POST['question-18-answers'];
             $answer19 = $_POST['question-19-answers'];
             $answer20 = $_POST['question-20-answers'];
-            /*$answer21 = $_POST['question-21-answers'];
-            $answer22 = $_POST['question-22-answers'];
-            $answer23 = $_POST['question-23-answers'];
-            $answer24 = $_POST['question-24-answers'];
-            $answer25 = $_POST['question-25-answers'];
-            $answer26 = $_POST['question-26-answers'];
-            $answer27 = $_POST['question-27-answers'];
-            $answer28 = $_POST['question-28-answers'];
-            $answer29 = $_POST['question-29-answers'];
-            $answer30 = $_POST['question-30-answers'];
-            $answer31 = $_POST['question-31-answers'];
-            $answer32 = $_POST['question-32-answers'];
-            $answer33 = $_POST['question-33-answers'];
-            $answer34 = $_POST['question-34-answers'];
-            $answer35 = $_POST['question-35-answers'];
-            $answer36 = $_POST['question-36-answers'];
-            $answer37 = $_POST['question-37-answers'];
-            $answer38 = $_POST['question-38-answers'];
-            $answer39 = $_POST['question-39-answers'];
-            $answer40 = $_POST['question-40-answers']; */
-        
-            $totalCorrect = 0;
             
-            if ($answer1 == "D") { $totalCorrect++; }
-            if ($answer2 == "B") { $totalCorrect++; }
-            if ($answer3 == "D") { $totalCorrect++; }
-            if ($answer4 == "C") { $totalCorrect++; }
-            if ($answer5 == "D") { $totalCorrect++; }
-            if ($answer6 == "A") { $totalCorrect++; }
-            if ($answer7 == "A") { $totalCorrect++; }
-            if ($answer8 == "C") { $totalCorrect++; }
-            if ($answer9 == "B") { $totalCorrect++; }
-            if ($answer10 == "C") { $totalCorrect++; }
-            if ($answer11 == "D") { $totalCorrect++; }
-            if ($answer12 == "B") { $totalCorrect++; }
-            if ($answer13 == "A") { $totalCorrect++; }
-            if ($answer14 == "C") { $totalCorrect++; }
-            if ($answer15 == "B") { $totalCorrect++; }
-            if ($answer16 == "A") { $totalCorrect++; }
-            if ($answer17 == "C") { $totalCorrect++; }
-            if ($answer18 == "D") { $totalCorrect++; }
-            if ($answer19 == "D") { $totalCorrect++; }
-            if ($answer20 == "A") { $totalCorrect++; }
-            /*if ($answer21 == "B") { $totalCorrect++; }
-            if ($answer22 == "A") { $totalCorrect++; }
-            if ($answer23 == "B") { $totalCorrect++; }
-            if ($answer24 == "C") { $totalCorrect++; }
-            if ($answer25 == "B") { $totalCorrect++; }
-            if ($answer26 == "A") { $totalCorrect++; }
-            if ($answer27 == "D") { $totalCorrect++; }
-            if ($answer28 == "A") { $totalCorrect++; }
-            if ($answer29 == "C") { $totalCorrect++; }
-            if ($answer30 == "C") { $totalCorrect++; }
-            if ($answer31 == "D") { $totalCorrect++; }
-            if ($answer32 == "A") { $totalCorrect++; }
-            if ($answer33 == "B") { $totalCorrect++; }
-            if ($answer34 == "C") { $totalCorrect++; }
-            if ($answer35 == "B") { $totalCorrect++; }
-            if ($answer36 == "A") { $totalCorrect++; }
-            if ($answer37 == "D") { $totalCorrect++; }
-            if ($answer38 == "A") { $totalCorrect++; }
-            if ($answer39 == "C") { $totalCorrect++; }
-            if ($answer40 == "C") { $totalCorrect++; } */
+            $totalCorrectEnd = 0;
             
-            echo "<div id='results'>$totalCorrect / 20 correct</div>";
+            if ($answer1 == "D") { $totalCorrectEnd++; }
+            if ($answer2 == "B") { $totalCorrectEnd++; }
+            if ($answer3 == "D") { $totalCorrectEnd++; }
+            if ($answer4 == "C") { $totalCorrectEnd++; }
+            if ($answer5 == "D") { $totalCorrectEnd++; }
+            if ($answer6 == "A") { $totalCorrectEnd++; }
+            if ($answer7 == "A") { $totalCorrectEnd++; }
+            if ($answer8 == "C") { $totalCorrectEnd++; }
+            if ($answer9 == "B") { $totalCorrectEnd++; }
+            if ($answer10 == "C") { $totalCorrectEnd++; }
+            if ($answer11 == "D") { $totalCorrectEnd++; }
+            if ($answer12 == "B") { $totalCorrectEnd++; }
+            if ($answer13 == "A") { $totalCorrectEnd++; }
+            if ($answer14 == "C") { $totalCorrectEnd++; }
+            if ($answer15 == "B") { $totalCorrectEnd++; }
+            if ($answer16 == "A") { $totalCorrectEnd++; }
+            if ($answer17 == "C") { $totalCorrectEnd++; }
+            if ($answer18 == "D") { $totalCorrectEnd++; }
+            if ($answer19 == "D") { $totalCorrectEnd++; }
+            if ($answer20 == "A") { $totalCorrectEnd++; }
             
-        ?>
+            
+            
+            
+			$servername = "localhost";
+			$username = "leonmul";
+			$password = "";
+			$dbname = "leaderboard";
+			
+			// Create connection
+			$conn = mysqli_connect($servername, $username, $password, $dbname);
+			
+			
 	
-	</div>
-	
-<script type="text/javascript">
-	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	</script>
-	<script type="text/javascript">
-	var pageTracker = _gat._getTracker("UA-68528-29");
-	pageTracker._initData();
-	pageTracker._trackPageview();
-	</script>
+			
+			//Grab the current users score from the database and save it as a php variable ($dbUserScore)
+			$dbUserScore="SELECT score FROM endQuiz WHERE email='{$_SESSION['$myemail']}'";
+			
+			
+			//If the user has already posted a score and they get a better score, the new higher score will overwrite the 
+			if($dbUserScore<$totalCorrectEnd){
+			$sql="REPLACE INTO endQuiz(email,score) VALUES('{$_SESSION['$myemail']}','$totalCorrectEnd')";
+			
+				if (mysqli_query($conn, $sql)) {
+				    $last_id = mysqli_insert_id($conn);
+				    echo "Your score has been posted to the database!!";
+				} else {
+			 		echo "An error occured trying to post - compare score section!";
+				}
+			}
+			
+			else if($dbUserScore>$totalCorrectEnd){
+			
+			 	echo "<script>alert('You have not beaten your score and your highest score shall remain within the leaderboard!');</script>";
+				
+			}				
+			
+			//If the user has not yet posted a score to the Database, their score will be posted
+			else{
+			$sql="INSERT INTO endQuiz(email,score) VALUES('{$_SESSION['$myemail']}','$totalCorrectEnd')";
+			
+			
+				if (mysqli_query($conn, $sql)) {
+				    $last_id = mysqli_insert_id($conn);
+				    echo "Your score has been posted to the database!!";
+				} else {
+			 		echo "An error occured trying to post - new person record !";
+				}
+			}			
+		
 
-</body>
+			
+			mysqli_close($conn);
+			
+			
+			
+			?>
+          	
+			
+			<div class="container">
+				<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<h1>Competition Quiz Grade</h1>
+				<?php echo "<div id='results'>$totalCorrectEnd / 20 correct</div>";
+				?>
+				</br>
+				
+			<a class="btn submitButton roundBtn greenHoverBtn" href="Quiz.html">Return to Quiz Page</a>
+			</div>
+			</div>
+			
+			</br>
+			</br>
 
-</html>
+				<div class ="topFooter">
+	                 <div class="container whiteText">
+						<div class=" row medPadding">
+							<div class="col-md-4 text-center"> 			
+							<h4></h4>
+							</div>
+							<div class="col-md-1 text-center"> 			
+								<a href ="logout.php" ><img class="footerIcon" src="images/logout2.png" /></a>
+								<strong>Logout</strong>
+							</div>	
+							<div class="col-md-1 text-center"> 			
+								<a href ="leaderboards.php" ><img class="footerIcon" src="images/Leaderboards2.png" /></a>	
+								<strong>Leaderboards</strong>
+							</div>
+							<div class="col-md-1 text-center"> 			
+								<a href ="Quiz.html" ><img class="footerIcon" src="images/quiz2.png" /></a>
+								<strong>Quiz</strong>
+							</div>
+							<div class="col-md-1 text-center"> 			
+								<a href ="maps.php" ><img class="footerIcon" src="images/map2.png" /></a>
+								<strong>Maps</strong>
+							</div>							
+							<div class="col-md-4 text-right"> 			
+			
+							</div>							
+						</div>
+					</div>
+				</div>
+				
+				<div class="topFooter whiteText">
+					<div class="container whiteText">
+						<div class=" row smlPadding">
+							<div class="col-md-2 text-center"> 			
+								<h4></h4>
+							</div>
+								<div class="col-md-2 text-center"> 			
+									<h4><strong>Educational Links</strong></h4>		
+								</div>	
+								<div class="col-md-2 text-center"> 			
+									<h4><strong>About Us</strong></h4>		
+								</div>
+								<div class="col-md-2 text-center"> 			
+									<h4><strong>Meet the Team</strong></h4>		
+								</div>
+								<div class="col-md-2 text-center"> 			
+									<h4><strong>Terms of Service</strong></h4>		
+								</div>								
+							<div class="col-md-2 text-right"> 			
+							</div>							
+						</div>
+					</div>
+				</div>
+				
+                <div class="footer footerBackground whiteText">
+					<div class=" row smlPadding">
+						<div class="col-md-6 text-center"> 			
+						<h4><strong>The Digital Maths Academy</strong></h4>
+						</div>
+						<div class="col-md-5 text-center"> 			
+							<h4><strong>Copyright 2016 &copy;</strong></h4>		
+						</div>	
+						<div class="col-md-1 text-right"> 			
+		
+						</div>							
+					</div>
+				</div>
+                	
+               
+                		
+            <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+			<script src="js/bootstrap.js"></script>	
+			<script type="text/javascript" src="js/script.js"></script>	
+
+		</body>
+	</html>

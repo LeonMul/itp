@@ -11,17 +11,18 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-if($_REQUEST['name']=='' || $_REQUEST['email']=='' || $_REQUEST['message']=='' )
+if($_REQUEST['name']=='' || $_REQUEST['email']=='')
 {
-Echo "Cant send, missing content.";
+Echo "Please return to the form and fill the empty field.";
 }
 
 else{
-$sql="INSERT INTO users(name,email,message) VALUES('".$_REQUEST['name']."', '".$_REQUEST['email']."', '".$_REQUEST['message']."')";
+$sql="INSERT INTO newsletter(name,email) VALUES('".$_REQUEST['name']."', '".$_REQUEST['email']."')";
 
 	if (mysqli_query($conn, $sql)) {
-	    $last_id = mysqli_insert_id($conn);
-	    echo "New record created successfully. Last inserted ID is: " . $last_id;
+	    echo "Thank you for signing up to our newsletter, your details have been posted to our database and you shall recieve emails in the coming weeks";
+
+
 	} else {
 	    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 	}
@@ -29,7 +30,6 @@ $sql="INSERT INTO users(name,email,message) VALUES('".$_REQUEST['name']."', '".$
 
 mysqli_close($conn);
 ?>
-
 
 <DOCTYPE html>
 <html>
@@ -45,8 +45,8 @@ mysqli_close($conn);
 		<div class=" container">
 			<div class="row text-center">
 			    <div class="col-md-3 text-center">
-					 <h3>Question sent! We'll email you soon :)</h3>
-					<a href ="Index.html" button class="btn submitButton squareBtn greenHoverBtn" href="home.html">Home</a>
+					 <h3>Please return to home page...</h3>
+					<a href ="home.html" button class="btn greenHoverBtn roundBtn">Return to home</a>
                  </p>		
 			</div>
 		</div>

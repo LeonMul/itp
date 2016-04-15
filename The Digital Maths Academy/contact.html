@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 	<html>
 		<head>
 			<title>Contact</title>
@@ -11,9 +11,6 @@
 		<body class="bgndImg1 whiteText">
 			
 			
-			
-																
-																	
 			<div class="navbar-fixed-top navbar-default fixed customColourNavbar" id="home">
 				<div class="container">
 					<div class="navbar-brand">
@@ -24,9 +21,21 @@
 					</button>
 					<div class="collapse navbar-collapse navHeaderCollapse"> 
 						<ul class="nav navbar-nav navbar-right navHover">
-					
-							<li><a href="home.html">Back</a></li>
-
+							<li><a href="home.php">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							
+							<li class="dropdown">
+						        <a class="dropdown-toggle customColourNavbar" data-toggle="dropdown" href="#">Activities
+						        <span class="caret"></span></a>
+						        <ul class="dropdown-menu customColourNavbar">
+						        <li><a href="Quiz.html">Quiz</a></li>
+						        <li><a href="leaderboards.php">Leaderboards</a></li> 
+								<li><a href="Games.html">Games</a></li> 
+						        </ul>
+						    </li>
+						    
+							<li><a href="contact.html">Contact</a></li>												
+							<li><a href="logout.php">Logout</a></li>
 						</ul>
 					</div>
 				</div>
@@ -64,30 +73,31 @@
 				
 				</div> 			
 			<div class="col-md-8 text-center smlPadding darkGreyText"> 
-				<h2><strong>Send us an Email</strong></h2>
-                	<form role="form" method="POST" action="Contact.php" id="signupForm">
+				<h2><strong>Questions or Comments?</strong></h2>
+				<h3>Fill in the section below and we will get back to you!</h3>
+                	<form role="form" method="POST" action="contact.php" id="contactForm">
 					
-						<label for="name">User Name:</label>
-						<input type="text" name="name" id="name"                class="form-control" placeholder="Your username here"/>
+						<label for="name">Name:</label>
+						<input type="text" name="name" id="name" class="form-control" placeholder="Your name here" required/>
 					
 						<label for="email"> Email:</label>
-						<input type="email" name="email" id="email"             class="form-control" placeholder="example@example.com"/>
+						<input type="email" name="email" id="email"class="form-control" placeholder="example@example.com"/>
 						
-						<label for="question"> Question:</label>
-						<textarea rows="6"  name="message" id="message"	        class="form-control" placeholder="Your question here"></textarea>
+						<label for="question"> Comment:</label>
+						<textarea class="form-control" rows="5" maxlength="255" id="comment" name="comment" placeholder="Enter your comment here..." required></textarea>
 						
 						<br/>
-						<button class="btn roundBtn greenHoverBtn" type="submit" name="submit" value="Send Message">Send Question!</button>
-					
+						<button type="submit" name="submit" value="submit" class="btn greenHoverBtn roundBtn">Send Query</button>
 					</form>
             </div>
+            
             <div class="col-md-2 text-center smlPadding">
 				</div> 
             </div>
                 
                 
                 	
-             <hr />
+			<hr class="shortHr" />
              <div class="container"> 
             	<div class="col-md-12 text-center smlPadding darkGreyText"> 
                 	<h2 class=""><strong>Find and follow us on Social Media :)</strong></h2>
@@ -100,7 +110,7 @@
 					<a href="https://www.facebook.com/" target="_blank"><h4 class="darkGreyText">Message Us</h4></a>
 				</div>
 				<div class="col-md-2 text-center smlPadding"> 	
-					<a href="https://twitter.com/?lang=en" target="_blank"><img  src="images/social-icons/twitter.png" class="imgContact"  ></a>
+					<a href="https://twitter.com/?lang=en" target="_blank"><img  src="images/social-icons/twitter.png" class="imgContact"></a>
 						<a href="https://www.twitter.com/" target="_blank"><h4 class="darkGreyText">Follow Us</h4></a>
 				</div>
 				<div class="col-md-2 text-center smlPadding"> 	
@@ -116,7 +126,7 @@
 				</div>
             </div>    	
                 	
-                	<hr />
+			<hr class="shortHr" />
                 	
                 	
                 	
@@ -144,33 +154,27 @@
 					                <br />
 					                <br />
 					                <br />
-								
 
-
-
-
-
-
-			<div class ="topFooter">
+				<div class ="topFooter">
 	                 <div class="container whiteText">
 						<div class=" row medPadding">
 							<div class="col-md-4 text-center"> 			
 							<h4></h4>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<a href ="Index.html" ><img class="footerIcon" src="images/logout2.png" /></a>
+								<a href ="logout.php" ><img class="footerIcon" src="images/logout2.png" /></a>
 								<strong>Logout</strong>
 							</div>	
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/Leaderboards2.png" />	
+								<a href ="leaderboards.php" ><img class="footerIcon" src="images/Leaderboards2.png" /></a>	
 								<strong>Leaderboards</strong>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/quiz2.png" />
+								<a href ="Quiz.html" ><img class="footerIcon" src="images/quiz2.png" /></a>
 								<strong>Quiz</strong>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/map2.png" />
+								<a href ="maps.php" ><img class="footerIcon" src="images/map2.png" /></a>
 								<strong>Maps</strong>
 							</div>							
 							<div class="col-md-4 text-right"> 			
@@ -204,22 +208,23 @@
 					</div>
 				</div>
 				
-             
-                		
-                		
-      
+                <div class="footer footerBackground whiteText">
+					<div class=" row smlPadding">
+						<div class="col-md-6 text-center"> 			
+						<h4><strong>The Digital Maths Academy</strong></h4>
+						</div>
+						<div class="col-md-5 text-center"> 			
+							<h4><strong>Copyright 2016 &copy;</strong></h4>		
+						</div>	
+						<div class="col-md-1 text-right"> 			
+						</div>							
+					</div>
+				</div>
+				
 
-
-			<script>
-    function Refresh() {
-        window.parent.location = window.parent.location.href;
-    }
-</script>
-
-            <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+            <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 			<script src="js/bootstrap.js"></script>	
 			<script type="text/javascript" src="js/script.js"></script>	
-			   <script src="js/jquery.js"></script>
 
 		</body>
 	</html>

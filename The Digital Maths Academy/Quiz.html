@@ -16,7 +16,7 @@
 			
 																
 																	
-		<div class="navbar-fixed-top navbar-default fixed customColourNavbar" id="home">
+			<div class="navbar-fixed-top navbar-default fixed customColourNavbar" id="home">
 				<div class="container">
 					<div class="navbar-brand">
 						The Digital Maths Academy
@@ -26,13 +26,21 @@
 					</button>
 					<div class="collapse navbar-collapse navHeaderCollapse"> 
 						<ul class="nav navbar-nav navbar-right navHover">
-					
-									<li><a href="home.php">Home</a></li>
-									<li><a href="#about">About</a></li>
-									<li><a href="Games.html">Games</a></li>
-									<li><a href="contact.html">Contact</a></li>												
-																			
-							<li><a href="Index.html">Logout</a></li>
+							<li><a href="home.php">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							
+							<li class="dropdown">
+						        <a class="dropdown-toggle customColourNavbar" data-toggle="dropdown" href="#">Activities
+						        <span class="caret"></span></a>
+						        <ul class="dropdown-menu customColourNavbar">
+						        <li><a href="Quiz.html">Quiz</a></li>
+						        <li><a href="leaderboards.php">Leaderboards</a></li> 
+								<li><a href="Games.html">Games</a></li> 
+						        </ul>
+						    </li>
+						    
+							<li><a href="contact.html">Contact</a></li>												
+							<li><a href="logout.php">Logout</a></li>
 						</ul>
 					</div>
 				</div>
@@ -64,78 +72,101 @@
 			
 			
 			<div class="container">
-			<div class="row padding" id="two">
-				<div class="col-md-2"></div>
-							<div class="col-md-6">
-								<h2 class="text-center">Time to test your Knowledge!</h2>
-								<p class="text-justify">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. 
-								Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-								fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-								tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-								
-							</div>
-							<div class="col-md-3" class ="subjectHomeImg">
-								<img  class ="subjectHomeImg" src="images/cal.jpg">
-							</div>
-							
-						</div>
+				<div class="row lrgpadding" id="">
+					<div class="col-md-3">
+					</div>
+					
+					<div class="col-md-6">
+						<h1 class="text-center">Take one of our quizes to test your knowledge!</h1>
+						<h3 class="text-center">Below you will find our quiz section, here you can compete with your friends and other students within our quizes. The highest results will be posted to our leaderboards section, so head on over there after to check out your listing on the various leaderboards!   </h3>
+					</div>
+						
+					<div class="col-md-3" class ="lrgpadding">
+					</div>
+				</div>
 			</div>
 			
 			
 			
 			
 			
-					<div class="container">
-						
+				<div class="container">
 					<div class=" row medPadding">
 						
-						<div class="col-md-3 text-center smlPadding" id="quizInvert"> 	
+						<div class="col-md-6 text-center smlPadding" id="quizInvert"> 	
 						<a href="QuizAddition.php"><img id="quizInvert" class ="QuizImg" src="images/AdditionNew.png"></a>
 							<h3><strong>Addition</strong></h3>								
 						</div>							
 						
-						<div class="col-md-3 text-center smlPadding"  id="quizInvert"> 
+						<div class="col-md-6 text-center smlPadding"  id="quizInvert"> 
 							<a href="QuizSubtraction.php"><img class ="QuizImg" src="images/subtractionNew1.png"></a>
 							<h3><strong>Subtraction</strong></h3>							
 						</div>
+					</div>
+				</div>
+				
+				<div class="container">
+					<div class=" row ">
+						<div class="col-md-12 text-center smlPadding"> 	
+							<h2><strong>Time to put your skills to the test!</strong></h2>
+							<h3>Below you will find our competition quiz!
+							<br />
+							Here the top 3 scoring students are entered into a draw to win a unique prize!
+							<br />
+							Have you got what it takes?
+							</h3>
+						</div>							
+					</div>
+				</div>
+				<div class="container">
+					<div class="col-md-3 text-center smlPadding">
+						</div>
+					<div class="col-md-6 text-center smlPadding">
+						<a href="endQuiz.php"><img class="quizTrophy" src="images/FINALimage.png"/></a>
+						<h3><strong> Competition Quiz</strong></h3>
+					</div> 
+				</div>				
+					
+				<div class="container">
+					<div class=" row medPadding">
 						
-						<div class="col-md-3 text-center smlPadding"  id="quizInvert"> 
-						<a href="QuizMulti.php"><img class ="QuizImg" src="images/MultiNew.png"></a>
-							<h3><strong>Multiplication</strong></h3>								
-						</div>		
-						
-						<div class="col-md-3 text-center smlPadding"  id="quizInvert"> 
-						<a href="QuizDivision.php"><img class ="QuizImg" src="images/DivisionNew.png"></a>
-
+						<div class="col-md-6 text-center smlPadding" id="quizInvert"> 	
+						<a href="QuizDivision.php"><img id="quizInvert" class ="QuizImg" src="images/DivisionNew.png"></a>
 							<h3><strong>Division</strong></h3>								
 						</div>							
 						
+						<div class="col-md-6 text-center smlPadding"  id="quizInvert"> 
+							<a href="QuizMulti.php"><img class ="QuizImg" src="images/MultiNew.png"></a>
+							<h3><strong>Multiplication</strong></h3>							
+						</div>
 					</div>
 				</div>
-			
+
+				
+
 			
 			
 
-<div class ="topFooter">
+				<div class ="topFooter">
 	                 <div class="container whiteText">
 						<div class=" row medPadding">
 							<div class="col-md-4 text-center"> 			
 							<h4></h4>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<a href ="Index.html" ><img class="footerIcon" src="images/logout2.png" /></a>
+								<a href ="logout.php" ><img class="footerIcon" src="images/logout2.png" /></a>
 								<strong>Logout</strong>
 							</div>	
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/Leaderboards2.png" />	
+								<a href ="leaderboards.php" ><img class="footerIcon" src="images/Leaderboards2.png" /></a>	
 								<strong>Leaderboards</strong>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<a href="Quiz.html"><img class="footerIcon" src="images/quiz2.png" /></a>
+								<a href ="Quiz.html" ><img class="footerIcon" src="images/quiz2.png" /></a>
 								<strong>Quiz</strong>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/map2.png" />
+								<a href ="maps.php" ><img class="footerIcon" src="images/map2.png" /></a>
 								<strong>Maps</strong>
 							</div>							
 							<div class="col-md-4 text-right"> 			

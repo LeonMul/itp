@@ -23,13 +23,21 @@
 					</button>
 					<div class="collapse navbar-collapse navHeaderCollapse"> 
 						<ul class="nav navbar-nav navbar-right navHover">
-					
-									<li><a href="home.html">Home</a></li>
-									<li><a href="#about">About</a></li>
-									<li><a href="Games.html">Games</a></li>
-									<li><a href="contact.html">Contact</a></li>	
-									<li><a href="Index.html">Logout</a></li>
-
+							<li><a href="home.php">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							
+							<li class="dropdown">
+						        <a class="dropdown-toggle customColourNavbar" data-toggle="dropdown" href="#">Activities
+						        <span class="caret"></span></a>
+						        <ul class="dropdown-menu customColourNavbar">
+						        <li><a href="Quiz.html">Quiz</a></li>
+						        <li><a href="leaderboards.php">Leaderboards</a></li> 
+								<li><a href="Games.html">Games</a></li> 
+						        </ul>
+						    </li>
+						    
+							<li><a href="contact.html">Contact</a></li>												
+							<li><a href="logout.php">Logout</a></li>
 						</ul>
 					</div>
 				</div>
@@ -66,8 +74,13 @@
 			
 			
 	<div class="container">
+	    <div class=" row lrgPadding">
+			<div class="col-md-3 text-center smlPadding"> 	
+			</div>
+						
+			<div class="col-md-6 text-center smlPadding">
 
-<form action="gradeDivision.php" method="post" id="quiz">
+            <form action="gradeDivision.php" method="post" id="quiz">
 		
             <ol>
             
@@ -332,9 +345,13 @@
             
             </ol>
             
-            <input type="submit" value="Submit Quiz"  />
+            <input type="submit" class="btn submitButton roundBtn greenHoverBtn" value="Submit Quiz"  />
 		
 		</form>
+		</br>
+	</div>
+	<div class="col-md-3 text-center smlPadding"></div>	
+		</div>
 	</div>
 	
 	
@@ -353,11 +370,11 @@
 								<strong>Logout</strong>
 							</div>	
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/Leaderboards2.png" />	
+								<a href="leaderboards.php"><img class="footerIcon" src="images/Leaderboards2.png" /></a>	
 								<strong>Leaderboards</strong>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/quiz2.png" />
+								<a href="Quiz.html"><img class="footerIcon" src="images/quiz2.png" /></a>
 								<strong>Quiz</strong>
 							</div>
 							<div class="col-md-1 text-center"> 			

@@ -14,7 +14,7 @@
 			
 																
 																	
-			<div class="navbar-fixed-top navbar-inverse" id="home">
+			<div class="navbar-fixed-top navbar-default fixed customColourNavbar" id="home">
 				<div class="container">
 					<div class="navbar-brand">
 						The Digital Maths Academy
@@ -24,23 +24,42 @@
 					</button>
 					<div class="collapse navbar-collapse navHeaderCollapse"> 
 						<ul class="nav navbar-nav navbar-right navHover">
-					
-									<li><a href="home.php">Home</a></li>
-									<li><a href="#about">About</a></li>
-									<li><a href="Games.html">Games</a></li>
-									<li><a href="contact.html">Contact</a></li>												
-																			
-							<li><a href="Index.html">Logout</a></li>
+							<li><a href="home.php">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							
+							<li class="dropdown">
+						        <a class="dropdown-toggle customColourNavbar" data-toggle="dropdown" href="#">Activities
+						        <span class="caret"></span></a>
+						        <ul class="dropdown-menu customColourNavbar">
+						        <li><a href="Quiz.html">Quiz</a></li>
+						        <li><a href="leaderboards.php">Leaderboards</a></li> 
+								<li><a href="Games.html">Games</a></li> 
+						        </ul>
+						    </li>
+						    
+							<li><a href="contact.html">Contact</a></li>												
+							<li><a href="logout.php">Logout</a></li>
 						</ul>
 					</div>
 				</div>
-			</div>	
+			</div>
 			
 				<div class=" row">
 					<div class="col-md-12 text-center lrgPaddingTop"> 	
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1190.8382655543317!2d-6.2438445334783745!3d53.349046329908234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e8cd86e97e7%3A0x6d51b774ee7fa935!2sNational+College+of+Ireland!5e0!3m2!1sen!2sie!4v1455882696428" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
 				</div>
+				
+				
+				<div class="container">
+					<div  class=" row lrgPadding">
+						<div id="mapholder" class="col-md-12 text-center smlPadding"> 	
+								<h3 id="demo">Click the button to get your position.</h3>
+								<button onclick="getLocation()">Try It</button>
+						</div>
+					</div>
+				</div>
+				
 				
 				<div class="container">
 					<div class=" row medPadding">
@@ -76,12 +95,61 @@
 				
 
 					
-									
+													
 
-				<div class="container">
+					<div class="container">
 					<div class=" row medPadding">
 						<div class="col-md-12 text-center smlPadding"> 	
-							<img class ="leaderboardImg" src="images/leaderboard.png">
+							<h2><strong>View leaderboards in more detail in the leaderboard section!</strong></h2>
+							</br>
+							<h1>School Leaderboard!</h1>
+							
+							
+				<?php
+					$servername = "localhost";
+					$username = "leonmul";
+					$password = "";
+					$dbname = "c9";
+					
+					// Create connection
+					$conn = mysqli_connect($servername, $username, $password, $dbname);
+					// Check connection
+					if (!$conn) {
+					    die("Connection failed: " . mysqli_connect_error());
+					}
+					
+					$sql = "SELECT school FROM users LIMIT 0, 10 ";
+					$result = mysqli_query($conn, $sql);
+					
+					
+					echo "<div class='container'>
+							<div class='col-md-2'></div>
+							<table class='table-hover table-bordered myTable'>
+							<tr>
+							<th>Schools</th>
+							</tr>";
+						
+					if (mysqli_num_rows($result) > 0) {
+					     //output data of each row
+					    while($row = mysqli_fetch_assoc($result)) {
+					         echo "<tr>";
+							
+							  echo "<td>" . $row['school'] . "</td>";
+							
+							  echo "</tr>";
+							
+							  }
+						
+							echo "</div> </table>";
+					} else {
+				    echo "0 results";
+					}
+	
+					mysqli_close($conn);
+				?>
+				
+							</div>
+							</br>
 						</div>							
 					</div>
 				</div>			
@@ -96,19 +164,19 @@
 							<h4></h4>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<a href ="Index.html" ><img class="footerIcon" src="images/logout2.png" /></a>
+								<a href ="logout.php" ><img class="footerIcon" src="images/logout2.png" /></a>
 								<strong>Logout</strong>
 							</div>	
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/Leaderboards2.png" />	
+								<a href ="leaderboards.php" ><img class="footerIcon" src="images/Leaderboards2.png" /></a>	
 								<strong>Leaderboards</strong>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/quiz2.png" />
+								<a href ="Quiz.html" ><img class="footerIcon" src="images/quiz2.png" /></a>
 								<strong>Quiz</strong>
 							</div>
 							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/map2.png" />
+								<a href ="maps.php" ><img class="footerIcon" src="images/map2.png" /></a>
 								<strong>Maps</strong>
 							</div>							
 							<div class="col-md-4 text-right"> 			
