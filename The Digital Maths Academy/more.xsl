@@ -12,7 +12,7 @@
 			    <title>About us</title>
 			</head>
 			<body>
-				<!--3. More info-->
+				<!--1. More info-->
 				<xsl:apply-templates select="/database/section/more"/>
 				
 			</body>

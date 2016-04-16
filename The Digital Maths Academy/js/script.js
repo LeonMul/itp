@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 
 
-/*ajax xml thing*/
+/*-----onclick functions for xml content to div------*/
 function loadGamesData(){
 $.ajax({
 	url: "Games.php"
@@ -111,7 +111,7 @@ $.ajax({
 });
 }
 
-
+/*-----fade to functions for images/image classes -----*/
 $(document).ready(function(){
 	$('.imgContact').mouseenter(function(){
 		$(this).fadeTo('Slow',1.0);
@@ -124,50 +124,18 @@ $(document).ready(function(){
 	});	
 });
 
-
+/*-----alert function for when newsletter in subscribed too -----*/
 function newsletterConfirmation(){
 	alert("Thank you for signing up to our newsletter, your details shall be posted to our database and you shall recieve our newsletters in the coming weeks");
 }
-
+/*-----refresh page function for on buttons etc-----*/
   function Refresh() {
        window.parent.location = window.parent.location.href;
     }
     
 
 
-//map stuff geolocation
-var x = document.getElementById("demo");
-								
-	function getLocation() {
-		if (navigator.geolocation) {
-								        navigator.geolocation.getCurrentPosition(showPosition, showError);
-								    } else {
-								        x.innerHTML = "Geolocation is not supported by this browser.";
-								    }
-								}
-								
-								function showPosition(position) {
-								    var latlon = position.coords.latitude + "," + position.coords.longitude;
-								    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=18&size=800x300&sensor=false";
-								    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
-								}
-								
-								function showError(error) {
-								    switch(error.code) {
-								        case error.PERMISSION_DENIED:
-								            x.innerHTML = "User denied the request for Geolocation."
-								            break;
-								        case error.POSITION_UNAVAILABLE:
-								            x.innerHTML = "Location information is unavailable."
-								            break;
-								        case error.TIMEOUT:
-								            x.innerHTML = "The request to get user location timed out."
-								            break;
-								        case error.UNKNOWN_ERROR:
-								            x.innerHTML = "An unknown error occurred."
-								            break;
-								    }
-								}
+
 
 
 

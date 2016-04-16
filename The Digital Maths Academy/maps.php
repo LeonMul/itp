@@ -51,14 +51,7 @@
 				</div>
 				
 				
-				<div class="container">
-					<div  class=" row lrgPadding">
-						<div id="mapholder" class="col-md-12 text-center smlPadding"> 	
-								<h3 id="demo">Click the button to get your position.</h3>
-								<button onclick="getLocation()">Try It</button>
-						</div>
-					</div>
-				</div>
+
 				
 				
 				<div class="container">
@@ -93,66 +86,9 @@
 				</div>				
 				
 				
-
-					
 													
 
-					<div class="container">
-					<div class=" row medPadding">
-						<div class="col-md-12 text-center smlPadding"> 	
-							<h2><strong>View leaderboards in more detail in the leaderboard section!</strong></h2>
-							</br>
-							<h1>School Leaderboard!</h1>
-							
-							
-				<?php
-					$servername = "localhost";
-					$username = "leonmul";
-					$password = "";
-					$dbname = "c9";
 					
-					// Create connection
-					$conn = mysqli_connect($servername, $username, $password, $dbname);
-					// Check connection
-					if (!$conn) {
-					    die("Connection failed: " . mysqli_connect_error());
-					}
-					
-					$sql = "SELECT school FROM users LIMIT 0, 10 ";
-					$result = mysqli_query($conn, $sql);
-					
-					
-					echo "<div class='container'>
-							<div class='col-md-2'></div>
-							<table class='table-hover table-bordered myTable'>
-							<tr>
-							<th>Schools</th>
-							</tr>";
-						
-					if (mysqli_num_rows($result) > 0) {
-					     //output data of each row
-					    while($row = mysqli_fetch_assoc($result)) {
-					         echo "<tr>";
-							
-							  echo "<td>" . $row['school'] . "</td>";
-							
-							  echo "</tr>";
-							
-							  }
-						
-							echo "</div> </table>";
-					} else {
-				    echo "0 results";
-					}
-	
-					mysqli_close($conn);
-				?>
-				
-							</div>
-							</br>
-						</div>							
-					</div>
-				</div>			
 				
 				
 

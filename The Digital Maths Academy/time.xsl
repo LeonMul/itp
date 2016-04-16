@@ -13,14 +13,14 @@
 			</head>
 			<body>
 
-				<!--3. Notes-->
+				<!--1. Time-->
 				<xsl:apply-templates select="/database/section/time"/>
 
 			</body>
 		</html>
 	</xsl:template>
 
-	<!--2. information-->
+	<!--1. Time-->
 	<xsl:template match="time">
 		<xsl:value-of select="."/>
 	</xsl:template>

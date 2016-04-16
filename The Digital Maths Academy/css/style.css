@@ -8,15 +8,17 @@ body{
 	margin-bottom:10px;
 }
 
+/*------image/text hover css-----*/
 #quizInvert:hover img {
     -webkit-filter: invert(50%) !important;
 }
-
-.body1{
-background-image:url('../images/geryImage.png');
-background-attachment: scroll; /* default */
-background-attachment: fixed; /* force image to stay put */
+#quizInvert:hover {
+   color:#379e93;
 }
+#heading1:hover{
+	color:#379e93;
+}
+
 
 /*----------Images & Backgrounds----------*/
 .bgndImg{
@@ -27,6 +29,11 @@ background-attachment: fixed; /* force image to stay put */
   background-size: cover;
 }
 
+.body1{
+background-image:url('../images/geryImage.png');
+background-attachment: scroll; /* default */
+background-attachment: fixed; /* force image to stay put */
+}
 
 .jumbotron1{
 width:100%;
@@ -92,7 +99,7 @@ background-color:#FF9F58;
 
 
 .footerIcon{
-	width:70%;
+	width:30%;
 	height:auto;
 }
 
@@ -275,7 +282,7 @@ padding:0 10px;
 }
 
 
-
+/*------game page and games css-------*/
 .item{
 	margin-top:0px;
 	width:100%;
@@ -370,8 +377,12 @@ th{
 }
 
 .table-bordered{
-	width:800px;
 	font-size:large;
+	width:800px;
+}
+
+.table111{
+	width:500px;
 }
 
 
@@ -418,8 +429,8 @@ figure.effect-marley h2::after {
 	top: 100%;
 	left: 0;
 	width: 100%;
-	height: 4px;
-	background: #fff;
+	height: 2px;
+	background: #FFD700;
 	content: '';
 	-webkit-transform: translate3d(0,40px,0);
 	transform: translate3d(0,40px,0);
@@ -440,6 +451,4 @@ figure.effect-marley:hover p {
 }
 
 
-#heading1:hover{
-	color:#379e93;
-}
+

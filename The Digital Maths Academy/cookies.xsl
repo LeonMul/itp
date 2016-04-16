@@ -14,7 +14,7 @@
 			<body>
 
 				
-				<!--3. Notes-->
+				<!--1. Cookies-->
 				<xsl:apply-templates select="/database/section/cookies"/>
 
 				
@@ -22,7 +22,7 @@
 		</html>
 	</xsl:template>
 
-	<!--3. Cookies-->
+	<!--1. Cookies-->
 	<xsl:template match="cookies">
 	    <xsl:value-of select="."/>
 	</xsl:template>

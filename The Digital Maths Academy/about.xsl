@@ -12,14 +12,14 @@
 			    <title>About us</title>
 			</head>
 			<body>
-				<!--1. Subject title-->
+				<!--1. About us--> 
 				<xsl:apply-templates select="/database/section/about"/>
 				
 			</body>
 		</html>
 	</xsl:template>
 	
-	<!--1.subject title-->
+	<!--1.About us-->
 	<xsl:template match="about">
 		<xsl:value-of select="."/>
 	</xsl:template>

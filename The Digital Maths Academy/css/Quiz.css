@@ -4,7 +4,7 @@ body				{ font-family: ColabThi; }
 
 #page-wrap		    { width: 500px; margin: 0 auto; }
 
-h1                  { margin: 25px 0; font: 14px Georgia, Serif; text-transform: uppercase; letter-spacing: 3px; }
+h1                  { margin: 25px 0; font: 14px; letter-spacing: 3px; }
 
 #quiz input {
     vertical-align: middle;
@@ -29,5 +29,5 @@ h1                  { margin: 25px 0; font: 14px Georgia, Serif; text-transform:
 }
 
 #results {
-    font: 44px Georgia, Serif;
+    font: 44px;
 }

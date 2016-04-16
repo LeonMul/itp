@@ -44,26 +44,21 @@
 			</div>	
 			
 			
-				<div class="jumbotron">
+			<div class="jumbotron">
 				<div class=" container">
-					<div class=" row medPadding">
-						<div class="col-md-12 text-center smlPadding"> 	
-						<br/>
-								<br/>
-								<br/>
-								<br/>
-								<br/>
-								<img src="images/Division-Quiz.png">
+					<div class=" row smlPadding">
+						<div class="col-md-4 text-center smlPadding"> 	
+
 						</div>							
-								
-								<br/>
-								<br/>
-								<br/>
-								<br/>
-								<br/>
-								<br/>
-								<br/>
-								<br/>
+						
+						<div class="col-md-4 text-center smlPadding whiteText"> 
+						<br />
+								<h1> Division Quiz </h1>
+								<br />
+								<br />
+								 			
+						</div>
+						
 						<div class="col-md-4 text-justify smlPadding"> 
 
 						</div>										
@@ -359,29 +354,35 @@
 	
 	
 	
-	 	<div class ="topFooter">
+	 	<!-- Footer including footer-icons to undertake various tasks within the application -->
+				<div class ="topFooter">
 	                 <div class="container whiteText">
 						<div class=" row medPadding">
-							<div class="col-md-4 text-center"> 			
+							<div class="col-md-2 text-center"> 			
 							<h4></h4>
 							</div>
-							<div class="col-md-1 text-center"> 			
-								<a href ="Index.html" ><img class="footerIcon" src="images/logout2.png" /></a>
+							<div class="col-md-2 text-center">
+								<a href ="logout.php" ><img class="footerIcon" src="images/logout2.png" /></a>
+								<br/>								
 								<strong>Logout</strong>
-							</div>	
-							<div class="col-md-1 text-center"> 			
-								<a href="leaderboards.php"><img class="footerIcon" src="images/Leaderboards2.png" /></a>	
+							</div>
+							
+							<div class="col-md-2 text-center"> 			
+								<a href ="leaderboards.php" ><img class="footerIcon" src="images/Leaderboards2.png" /></a> 
+								<br/>
 								<strong>Leaderboards</strong>
 							</div>
-							<div class="col-md-1 text-center"> 			
-								<a href="Quiz.html"><img class="footerIcon" src="images/quiz2.png" /></a>
+							<div class="col-md-2 text-center"> 			
+								<a href ="Quiz.html" ><img class="footerIcon" src="images/quiz2.png" /></a>
+								<br/>								
 								<strong>Quiz</strong>
 							</div>
-							<div class="col-md-1 text-center"> 			
-								<img class="footerIcon" src="images/map2.png" />
+							<div class="col-md-2 text-center"> 			
+								<a href ="maps.php" ><img class="footerIcon" src="images/map2.png" /></a>
+								<br/>								
 								<strong>Maps</strong>
 							</div>							
-							<div class="col-md-4 text-right"> 			
+							<div class="col-md-2 text-right"> 			
 			
 							</div>							
 						</div>
@@ -421,6 +422,7 @@
 							<h4><strong>Copyright 2016 &copy;</strong></h4>		
 						</div>	
 						<div class="col-md-1 text-right"> 			
+		
 						</div>							
 					</div>
 				</div>
