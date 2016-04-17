@@ -3,15 +3,12 @@ session_start();
 ?>
 <!DOCTYPE html>
 
-
 <head>
-
-
   <title>Digital Maths Academy</title>
   <meta name="viewport" content="width=device-width, initial scale=1" />
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
   <link rel="stylesheet" href="css/style.css" type="text/css" />
-  <link rel="shortcut icon" href="images/companyLogo.png" />
+  <link rel="shortcut icon" href="images/companyLogo.ico" />
 </head>
 
 <body class="">
@@ -72,13 +69,18 @@ session_start();
 
   <div class="container">
     <div class=" row lrgPadding">
-      <div class="col-md-12 text-center smlPadding">
+      <div class="col-md-2 text-justify smlPadding"></div>      
+      <div class="col-md-8 text-center smlPadding">
+    <img class="logo lrgPadding" src="images/companyLogo.png" /></a>
+    
+      <hr class="shortHr smlPadding" />
         <h2><strong>Pick a topic to revise!</strong></h2>
 
         <h3>Below you will find some of our main topics.<br />
         These include activities to test your knowledge in the four most prominent maths
         subjects.</h3>
       </div>
+        <div class="col-md-2 text-justify smlPadding"></div>      
     </div>
   </div>
   <hr class="shortHr" />
@@ -160,7 +162,8 @@ session_start();
 
   <div class="container">
     <div class=" row medPadding">
-      <div class="col-md-12 text-center smlPadding">
+      <div class="col-md-2 text center smlPadding"></div>
+      <div class="col-md-8 text-center smlPadding">
         <h2><strong>View leaderboards in more detail in the leaderboard
         section!</strong></h2><br />
 
@@ -213,6 +216,7 @@ session_start();
                                                 mysqli_close($conn);
                                         ?>
       </div><br />
+        <div class="col-md-2 text center smlPadding"></div>
     </div>
   </div>
   <hr class="shortHr" />
@@ -222,7 +226,8 @@ session_start();
 
     <div class="col-md-8 text-center smlPadding darkGreyText">
       <h2><strong>Subscribe to our weekly newsletter!</strong></h2>
-
+      
+      <!--This form runs the PHP script "newsletter.php which posts the name and email to the form, we could not get the emails sending from cloud 9 due to security issues,so we stored the email in the db-->
       <form name="newsletter" method="post" action="newsletter.php" class="form" id=
       "newsletter">
         <div class="form-group">
@@ -241,6 +246,7 @@ session_start();
     <div class="col-md-2 text-center smlPadding"></div>
   </div><br />
   <br />
+  
   <!-- Footer including footer-icons to undertake various tasks within the application -->
 	</div>
   <div class="topFooter">

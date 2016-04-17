@@ -449,5 +449,10 @@
 	</script>
 
 </body>
-
+<!-- 
+The PHP quizes were taken from the below source, they were altered to ensure they suited our application
+The quiz scores are sent to the database when they are completed
+If the user has only achieved a lower score than they has already, their higher score will remain within the database
+Resource: https://css-tricks.com/building-a-simple-quiz/ 
+-->
 </html>

@@ -1,4 +1,7 @@
-<?php  session_start(); ?> 
+<?php  session_start();
+
+?>
+
 <?php
 //Session start is used to register the session when the user has entered the correct credentials
 
@@ -48,5 +51,22 @@ else {
 //The email used to login is stored as a session variable in php to post a welcome message to the user which includes their email/username used to login
 $_SESSION['$myemail'] = $myemail=$_POST['email']; 
 $_SESSION['$mypassword'] = $mypassword=$_POST['password']; 
-?>
 
+
+
+/*
+Resource - Whilst creating the Login and registration page, multiple resources were used, there were many errors in the tutorials as they recommended using sql, yet I realised that sql was fased out and sqli was what I was to be using with cloud 9 
+
+http://codular.com/php-mysqli - Description of Sqli (SQL Improved) -
+
+https://c9.io/blog/phpmyadmin/ - Setting up PHP my admin on cloud 9 
+
+http://mrbool.com/how-to-create-a-sign-up-form-registration-with-php-and-mysql/28675
+http://www.codingcage.com/2015/01/user-registration-and-login-script-using-php-mysql.html
+http://www.html-form-guide.com/php-form/php-registration-form.html
+http://codingcyber.com/simple-user-registration-script-in-php-and-mysql-84/
+http://www.sourcecodester.com/tutorials/php/4340/how-create-registration-page-phpmysql.html
+https://www.youtube.com/watch?v=yp_gH3zPfbo
+
+*/
+?>

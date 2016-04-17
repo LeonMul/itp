@@ -1,18 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-  <meta name="generator" content=
-  "HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
-
+  
   <title>Digital Maths Academy</title>
   <meta name="viewport" content="width=device-width, initial scale=1" />
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
   <link rel="stylesheet" href="css/style.css" type="text/css" />
-  <script src="js/slideshow.js" type="text/javascript">
-</script>
-  <link rel="shortcut icon" href="images/icon1.ico" />
+  <script src="js/slideshow.js" type="text/javascript"></script>
+   <link rel="shortcut icon" href="images/companyLogo.ico" />
 </head>
 
 <body>
@@ -111,6 +107,7 @@
                                                         die("Connection failed: " . mysqli_connect_error());
                                                     }
                                                     
+                                                    //The sql statement selects the email and score 
                                                     $sql = "SELECT email, score FROM additionQuiz ORDER BY score DESC LIMIT 0, 5 ";
                                                     $result = mysqli_query($conn, $sql);
                                                     
@@ -123,12 +120,17 @@
                                                                     <th>Email</th>
                                                                     <th>Score</th>
                                                                     </tr>";
+                                                                    
+                                                            /*This is a fetch query used to enable the user to grab the information from the database -  
+                                                            Resource : http://www.w3schools.com/php/php_mysql_select.asp 
+                                                            As we were not as farmiliar with PHP and SQL, we used a variety of sources to undertake our project,but one of the most prominent was W3schools
+                                                            */
                                                             
                                                     if (mysqli_num_rows($result) > 0) {
                                                          //output data of each row
                                                         while($row = mysqli_fetch_assoc($result)) {
                                                              echo "<tr>";
-                    
+                                                          //Once the rows are grabbed from the database, they are printed to the application using the echo statement in PHP
                                                                       echo "<td>" . $row['email'] . "</td>";
                                                                     
                                                                       echo "<td>" . $row['score'] . "</td>";
@@ -140,6 +142,7 @@
                                                                     echo "</div> </table>";
                                                 
                                                     } else {
+                                                      //return 0 results if no fields can be grabbed from the database
                                                 echo "0 results";
                                                     }
                     
@@ -147,7 +150,7 @@
                                             ?></li>
 
             <li class="list-group-item"><?php
-                                                    //connects to and accessed the database to grab required data
+                                                    //The same procedure as above
                                             
                                                     $servername = "localhost";
                                                     $username = "leonmul";
@@ -197,7 +200,7 @@
                                             ?></li>
 
             <li class="list-group-item"><?php
-                                                    //connects to and accessed the database to grab required data
+                                                    //Each section used to grab the leaderboard information is identical, and the same resources were used the only thing was that the table chosen was altered
                                             
                                                     $servername = "localhost";
                                                     $username = "leonmul";
@@ -298,7 +301,7 @@
           </ul>
 
           <div class="panel-footer">
-            Footer
+            
           </div>
         </div>
       </div>
@@ -360,6 +363,7 @@
                 
                                                 mysqli_close($conn);
                                         ?>
+        </div>
       </div>
     </div>
   </div>
@@ -435,7 +439,8 @@
 
       <div class="col-md-1 text-right"></div>
     </div>
-  </div><script src="https://code.jquery.com/jquery-1.11.3.min.js" type=
+  </div>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js" type=
   "text/javascript">
 </script><script src="js/bootstrap.js" type="text/javascript">
 </script><script type="text/javascript" src="js/script.js">
